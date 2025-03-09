@@ -1,0 +1,42 @@
+{% extends "recipe/layout.html" %}
+{% load static %}
+
+{% block extra_head %}
+    <link href="{% static 'recipe/home.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block body %}
+    <nav>
+        <a href="{% url 'logout' %}" class="btn btn-danger">logout</a>
+        <a href="{% url 'add_item' %}" class="btn btn-primary">Add favorite recipe</a>
+    </nav>
+    <h1>Hii! {{user.first_name}}, Welcome to recipe..</h1>
+    <table class="table table-sm table-bordered">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">S.No</th>
+                <th scope="col">Title</th>
+                <th scope="col">Ingredients</th>
+                <th scope="col">Process
+                    
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for r in recipes %}
+            <tr>
+                <td>{{forloop.counter}}</td>
+                <td>{{r.title}}</td>
+                <td>{{r.ingredients}}</td>
+                <td><a class="btn btn-primary btn-sm" href="{% url 'process' r.process %}">process</a></td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="4">No favorite recipes added yet.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+    
+{% endblock %}     

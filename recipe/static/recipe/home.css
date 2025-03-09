@@ -1,0 +1,18 @@
+table{
+    margin-top:3%;
+    text-align: center;
+}
+h1{
+    font-size: 30px !important;
+}
+nav{
+    display: flex;
+    gap:40px;
+    margin-left:72%;
+    margin-top:2%;
+}
+nav a.btn{
+    text-decoration: none;
+    font-size: 14px;
+
+}

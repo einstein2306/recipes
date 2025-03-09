@@ -1,0 +1,35 @@
+.form1{
+    text-align: center;
+    width:70%;
+    margin-left: 16%;
+    margin-top: 2%;
+}
+
+h1{
+    text-align: center;
+    font-size:25px !important;
+    margin-top:2% !important;
+}
+
+.form1 input[type="text"] {
+    border:1px solid black;
+    width:30%;
+    margin-top: 4%;
+}
+
+#ingredients{
+    border:1px solid black;
+    width:30%;
+}
+
+#process{
+    margin-left:40%;
+    width:60%;
+    margin-top: -25%;
+    border:1px solid black;
+}
+
+#submit{
+    margin-top:5%;
+}
+
