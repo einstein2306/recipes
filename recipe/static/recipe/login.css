@@ -11,7 +11,7 @@
 }
 
 @media (max-width:768px){
-    .change{
+    .change form{
         margin-top:10%;
         width: 30%;
     }
