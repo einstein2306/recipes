@@ -15,9 +15,13 @@
 @media (max-width:768px){
     .change{
         margin-top:10%;
-        width:30%;
+        width: 80%;
+        margin-left: 10%;
+    }
+    .change a {
+        font-size: smaller;
     }
     #message{
-        margin-top:10%;
+        margin-top:5%;
     }
 }
