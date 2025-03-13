@@ -16,3 +16,10 @@
     margin-left:3px;
     text-decoration: none;
 }
+
+@media(max-width:768px){
+    h1{
+        font-size:10px;
+    }
+
+}
