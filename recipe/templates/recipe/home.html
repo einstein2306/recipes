@@ -2,7 +2,9 @@
 {% load static %}
 
 {% block extra_head %}
+    {% block extra_styles %}
     <link href="{% static 'recipe/home.css' %}" rel="stylesheet" type="text/css">
+    {% endblock %}
 {% endblock %}
 
 {% block body %}

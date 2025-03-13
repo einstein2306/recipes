@@ -3,7 +3,9 @@
 {% load static %}
 
 {% block extra_head %}
-    <link href="{% static 'recipe/login.css' %}?v=1.1" rel="stylesheet">
+    {% block extra_styles %}
+        <link href="{% static 'recipe/login.css' %}?v=1.1" rel="stylesheet">
+    {% endblock %}
 {% endblock %}
 
 {% block body %}
