@@ -28,20 +28,3 @@
     }
 }
 
-@media only screen and (max-width: 600px) {
-    .change {
-        width: 90%; /* Further adjust the width for smaller screens */
-        margin-left: 5%; /* Center the form */
-        margin-top: 10px; /* Adjust the top margin */
-    }
-    .change form {
-        margin-top: 5%;
-        width: 100%; /* Make the form take full width */
-    }
-    #message {
-        margin-top: 5%;
-    }
-    .change a {
-        text-decoration: none;
-    }
-}
