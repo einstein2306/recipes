@@ -11,20 +11,10 @@
 }
 
 @media (max-width: 768px) {
-    .change {
-        width: 50% !important; /* Adjust the width for smaller screens */
-        margin-left: 10% !important; /* Center the form */
-        margin-top: 20px !important; /* Adjust the top margin */
+    .change{
+        width:20%;
+        margin-left:10%;
     }
-    .change form {
-        margin-top: 10% !important;
-        width: 50% !important; /* Make the form take full width */
-    }
-    #message {
-        margin-top: 5% !important;
-    }
-    .change a {
-        text-decoration: none !important;
-    }
+    
 }
 
