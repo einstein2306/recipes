@@ -12,9 +12,14 @@
 
 @media (max-width: 768px) {
     .change{
-        width:20%;
-        margin-left:10%;
+        width: 80%; /* Adjusted for better responsiveness */
+        margin-left: 10%;
     }
-    
+}
+
+@media (max-width: 768px) {
+    .change {
+        border: 2px solid red; /* Debugging aid */
+    }
 }
 
