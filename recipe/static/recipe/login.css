@@ -3,6 +3,7 @@
     text-align: center;
     margin-left: 36%;
     margin-top: 50px;
+    background-color: #f0f0f0; /* Debugging aid */
 }
 
 .change a {
@@ -11,14 +12,9 @@
 }
 
 @media (max-width: 768px) {
-    .change{
-        width: 30%; /* Adjusted for better responsiveness */
-        margin-left: 10%;
-    }
-}
-
-@media (max-width: 768px) {
     .change {
+        width: 80%; /* Adjusted for better responsiveness */
+        margin-left: 10%;
         border: 2px solid red; /* Debugging aid */
     }
 }
