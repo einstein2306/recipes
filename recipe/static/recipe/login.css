@@ -13,7 +13,7 @@
 
 @media (max-width: 768px) {
     .change {
-        width: 80%; /* Adjusted for better responsiveness */
+        width: 30%; /* Adjusted for better responsiveness */
         margin-left: 10%;
         border: 2px solid red; /* Debugging aid */
     }
