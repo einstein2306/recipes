@@ -4,6 +4,7 @@ from django.urls import reverse
 from django.contrib.auth import authenticate,login,logout
 from .models import Recipe
 from django.contrib.auth.models import User
+from django.utils.timezone import now
 
 # Create your views here.
 
@@ -28,10 +29,13 @@ def register(request):
         r = Recipe.objects.filter(user=user)
         return render(request,"recipe/home.html",{
             "recipes":r,
-            "user":user
+            "user":user,
+            'STATIC_VERSION': now().timestamp(),  # Cache-busting version
         })
 
-    return render(request,"recipe/register.html")
+    return render(request,"recipe/register.html",{
+        'STATIC_VERSION': now().timestamp(),  # Cache-busting version
+    })
 
 def index(request):
     
@@ -40,7 +44,8 @@ def index(request):
     r = Recipe.objects.filter(user=request.user)
     return render(request,"recipe/home.html",{
         "recipes":r,
-        "user":request.user
+        "user":request.user,
+        'STATIC_VERSION': now().timestamp(),  # Cache-busting version
     })
     
 def login_view(request):
@@ -59,16 +64,20 @@ def login_view(request):
         
         else:
             return render(request,"recipe/login.html",{
-                "message":"Invalid Credentials."
+                "message":"Invalid Credentials.",
+                'STATIC_VERSION': now().timestamp(),  # Cache-busting version
             })
    
-    return render(request,"recipe/login.html")
+    return render(request,"recipe/login.html",{
+        'STATIC_VERSION': now().timestamp(),  # Cache-busting version
+    })
         
 
 def logout_view(request):
     logout(request)
     return render(request,"recipe/login.html",{
-        "message":"Successfully Logged out."
+        "message":"Successfully Logged out.",
+        'STATIC_VERSION': now().timestamp(),  # Cache-busting version
     })
 
 def add_item(request):
@@ -82,11 +91,14 @@ def add_item(request):
         create_recipe.save()
         return HttpResponseRedirect(reverse('index'))
     
-    return render(request,"recipe/add_item.html")
+    return render(request,"recipe/add_item.html",{
+        'STATIC_VERSION': now().timestamp(),  # Cache-busting version
+    })
 
 def show_process(request,process):
     return render(request,"recipe/process.html",{
-        "process":process
+        "process":process,
+        'STATIC_VERSION': now().timestamp(),  # Cache-busting version
     })
 
 
